@@ -28,9 +28,9 @@ const log = (req, res, next) => {
 app.use('/api', router)
 
 // router functions
-router.get('/me', (req, res) => {
+router.get('/home', (req, res) => {
     res.json({
-        name: 'sushi'
+        name: 'router sushi12356'
     })
 })
 
@@ -38,7 +38,7 @@ router.get('/me', (req, res) => {
 // middleware and controller are basically the same thing it just thier intention is different.
 app.get('/home', log, (req, res) => {
     res.status(200).json({
-        name: 'sushi'
+        name: 'app sushi'
     })
 })
 
