@@ -4,10 +4,15 @@ import morgan from 'morgan'
 import config from './config'
 import cors from 'cors'
 import { connect } from './utils/db'
+const router = express.Router
 
 export const app = express()
 
 app.disable('x-powered-by')
+
+// register the items router
+
+router.use()
 
 app.use(cors())
 app.use(json())
