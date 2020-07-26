@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "test": "cross-env NODE_ENV=testing jest --forceExit --detectOpenHandles  --silent",
+    "test": "cross-env NODE_ENV=testing jest --forceExit --detectOpenHandles  ",
     "test-routes": "npm run test -t router",
     "test-models": "npm run test -t model",
     "test-controllers": "npm run test -t controllers",

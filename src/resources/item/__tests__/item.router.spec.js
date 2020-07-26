@@ -5,17 +5,20 @@ describe('item router', () => {
     // so assert that everything in the routes array is present in the router stack.
     const routes = [
       { path: '/', method: 'get' },
-      { path: '/:id', method: 'get' },
-      { path: '/:id', method: 'delete' },
-      { path: '/:id', method: 'put' },
-      { path: '/', method: 'post' }
+      // { path: '/:id', method: 'get' },
+      // { path: '/:id', method: 'delete' },
+      // { path: '/:id', method: 'put' },
+      // { path: '/', method: 'post' }
     ]
 
+    console.log('router--', JSON.stringify(router.stack[0], 0, 2))
+
+
     routes.forEach(route => {
-      console.log('router-----', router)
       const match = router.stack.find(
         s => s.route.path === route.path && s.route.methods[route.method]
       )
+      // expect(match).toEqual('')
       expect(match).toBeTruthy()
     })
   })
